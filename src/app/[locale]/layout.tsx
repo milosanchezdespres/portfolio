@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Geist } from "next/font/google"
 import '@/app/globals.css'
 import { get_string } from '@/app/lib/translation'
 
@@ -8,30 +8,26 @@ const geistSans = Geist({
   subsets: ["latin"],
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }> | { locale: string }
-}): Promise<Metadata> {
-  const awaitedParams = typeof (params as any).then === "function" ? await params : params
-  const t = get_string(awaitedParams.locale)
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const t = get_string(params.locale)
   return {
     title: t.title,
     description: t.description,
   }
 }
 
-export default function LocaleLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
   params: { locale: string }
 }) {
-  return <>{children}</>
+  return (
+    <html lang={params.locale}>
+      <body className={geistSans.variable + " antialiased"}>
+        {children}
+      </body>
+    </html>
+  )
 }
