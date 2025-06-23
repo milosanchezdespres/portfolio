@@ -26,14 +26,10 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode
-  // Type as any to bypass type errors from Next.js internals
-  params: any
+  params: { locale: string }
 }) {
-  // Await in case params is a Promise
-  const awaitedParams = await params
-
   return (
-    <html lang={awaitedParams.locale}>
+    <html lang={params.locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
