@@ -27,7 +27,13 @@ export async function generateMetadata({
   }
 }
 
-export default function RootLayout({ children, params }: LayoutProps) {
+export default function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode
+  params: { locale: string }
+}) {
   return (
     <html lang={params.locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
