@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import type { LayoutProps } from "next/app-router"
 import { Geist, Geist_Mono } from "next/font/google"
 import '@/app/globals.css'
 
@@ -27,12 +26,12 @@ export async function generateMetadata({
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Awaited<{ locale: string }>
 }) {
   return (
     <html lang={params.locale}>
