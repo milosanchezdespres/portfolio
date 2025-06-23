@@ -17,6 +17,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   params: any
 }) {
   const awaitedParams = typeof params.then === "function" ? await params : params
