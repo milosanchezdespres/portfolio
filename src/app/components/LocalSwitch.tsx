@@ -1,29 +1,34 @@
 'use client'
-import { useState } from 'react'
-import Link from 'next/link'
 
-const languages = ['en', 'fr', 'ja']
+import Link from 'next/link'
+import Image from 'next/image'
+
+const languages = [
+  { code: 'en', src: '/flags/en.png', imgClass: 'scale-x-85' },
+  { code: 'fr', src: '/flags/fr.png', className: 'scale-80' },
+  { code: 'ja', src: '/flags/ja.png' },
+]
 
 export default function LanguageSwitcher({ current }: { current: string }) {
-  // Find index of current language in languages array
-  const currentIndex = languages.indexOf(current)
-
-  // Start from the next language in the array, cycle through all
-  const [index, setIndex] = useState((currentIndex + 1) % languages.length)
-
-  const nextLang = languages[index]
-
-  const handleClick = () => {
-    setIndex((prev) => (prev + 1) % languages.length)
-  }
-
   return (
-    <Link
-      href={`/${nextLang}`}
-      onClick={handleClick}
-      className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white font-bold rounded cursor-pointer select-none"
-    >
-      {nextLang.toUpperCase()}
-    </Link>
+    <div className="flex gap-2">
+      {languages.map(({ code, src, className, imgClass }) => (
+        <Link
+          key={code}
+          href={`/${code}`}
+          className="w-12 h-12 rounded overflow-hidden flex items-center justify-center transition-all hover:border-2 hover:border-black bg-white"
+        >
+          <div className="relative w-8 h-6">
+            <Image
+              src={src}
+              alt={code}
+              fill
+              className={`object-contain ${className || ''} ${imgClass || ''}`}
+              sizes="32px"
+            />
+          </div>
+        </Link>
+      ))}
+    </div>
   )
 }
