@@ -21,14 +21,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-type AwaitedParams = Promise<{ locale: string }>
-
+// params is a Promise — you MUST await it
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: AwaitedParams
+  params: Promise<{ locale: string }>
 }) {
   const awaitedParams = await params
   return (
