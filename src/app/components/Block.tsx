@@ -2,11 +2,11 @@
 
 import Image from 'next/image'
 
-export default function Block({ color, hover, src }: { color: string; hover: string; src: string }) {
+export default function Block({ color, hover, text, src }: { color: string; hover: string; text: string; src: string }) {
   return (
     <div className="w-full">
       <div
-        className="aspect-square flex items-center justify-center transition-colors duration-300"
+        className="aspect-square flex flex-col items-center justify-center transition-colors duration-300"
         style={{ backgroundColor: color }}
         onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = hover)}
         onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = color)}
@@ -18,6 +18,7 @@ export default function Block({ color, hover, src }: { color: string; hover: str
           alt="Centered image"
           className="p-4"
         />
+        <p className="text-white underline">{text}</p>
       </div>
     </div>
   )
