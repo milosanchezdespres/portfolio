@@ -1,0 +1,7 @@
+[
+    {
+    "key": "f2",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Start Next.js Dev Server"
+    }
+]
