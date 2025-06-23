@@ -13,7 +13,6 @@ export default async function Page({ params }: { params: any }) {
       <header className="p-4">
         <LocalSwitch current={awaitedParams.locale} />
       </header>
-
       <BlockContainer>
         <Block color="#34d399" hover="#ffde00" text={messages.example_project_title} src="/vercel.svg" />
         <Block color="#f87171" hover="#60a5fa" text={messages.example_project_title} src="/vercel.svg" />
