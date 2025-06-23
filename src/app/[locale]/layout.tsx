@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import '@/app/globals.css'
 import { get_string } from '@/app/lib/translation'
+import type { LayoutProps } from "next/app-router"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,14 +22,11 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-type LayoutProps = {
-  children: React.ReactNode
-  params: { locale: string }
-}
-
 export default async function RootLayout({ children, params }: LayoutProps) {
+  const awaitedParams = await params
+
   return (
-    <html lang={params.locale}>
+    <html lang={awaitedParams.locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
