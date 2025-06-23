@@ -3,6 +3,7 @@ import Block from '@/app/components/Block'
 import { get_string } from '@/app/lib/translation'
 import LocalSwitch from '@/app/components/LocalSwitch'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function Page({ params }: { params: any }) {
   const awaitedParams = typeof params.then === 'function' ? await params : params
   const messages = get_string(awaitedParams.locale)
