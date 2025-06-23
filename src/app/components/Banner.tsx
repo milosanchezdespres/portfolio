@@ -19,10 +19,10 @@ export default function BlockContainer({ text, sub_text }: { text: string; sub_t
         ></path>
       </svg>
 
-      <span className="relative z-10 text-6xl font-extrabold text-white tracking-wide font-sans text-center">
+      <span className="relative z-10 text-5xl font-extrabold text-white tracking-wide font-sans text-center">
         {text}
         <br />
-        <span className="text-4xl font-normal mt-6 block">{sub_text}</span>
+        <span className="text-3xl font-normal mt-6 block">{sub_text}</span>
       </span>
     </div>
   )
