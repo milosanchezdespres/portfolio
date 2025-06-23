@@ -21,15 +21,17 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-// params is a Promise — you MUST await it
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
+  // Type as any to bypass type errors from Next.js internals
+  params: any
 }) {
+  // Await in case params is a Promise
   const awaitedParams = await params
+
   return (
     <html lang={awaitedParams.locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
