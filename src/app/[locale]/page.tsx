@@ -3,12 +3,14 @@ import Block from '@/app/components/Block'
 import { get_string } from '@/app/lib/translation'
 import LocalSwitch from '@/app/components/LocalSwitch'
 
-export default async function Page({ params }: { params: { locale: string } }) {
-  const messages = get_string(params.locale)
+export default async function Page({ params }: { params: any }) {
+  const awaitedParams = typeof params.then === 'function' ? await params : params
+  const messages = get_string(awaitedParams.locale)
+  
   return (
     <main>
       <header className="p-4">
-        <LocalSwitch current={params.locale} />
+        <LocalSwitch current={awaitedParams.locale} />
       </header>
 
       <BlockContainer>
