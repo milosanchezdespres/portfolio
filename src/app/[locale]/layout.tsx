@@ -1,19 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
 import '@/app/globals.css'
 import { get_string } from '@/app/lib/translation'
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
   const awaitedParams = typeof params.then === "function" ? await params : params
@@ -34,10 +23,6 @@ export default async function RootLayout({
   const awaitedParams = typeof params.then === "function" ? await params : params
 
   return (
-    <html lang={awaitedParams.locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {children}
-      </body>
-    </html>
+      <div lang={awaitedParams.locale}>{children}</div>
   )
 }
