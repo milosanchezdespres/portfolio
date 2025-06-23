@@ -1,17 +1,5 @@
-import BlockContainer from '@/app/components/BlockContainer'
-import Block from '@/app/components/Block'
+import { redirect } from 'next/navigation'
 
-export default function Page() {
-  return (
-    <BlockContainer>
-      <Block color="#34d399" hover="#ffde00" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#f87171" hover="#60a5fa" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#60a5fa" hover="#f87171" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#ffde00" hover="#f87171" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#ffde00" hover="#f87171" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#60a5fa" hover="#f87171" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#34d399" hover="#ffde00" text ="プロジェクト名" src="/vercel.svg" />
-      <Block color="#f87171" hover="#60a5fa" text ="プロジェクト名" src="/vercel.svg" />
-    </BlockContainer>
-  )
+export default function Root() {
+  redirect('/ja')
 }
