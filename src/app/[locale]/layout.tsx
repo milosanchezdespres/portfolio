@@ -13,12 +13,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>
-}): Promise<Metadata> {
-  const awaitedParams = await params
+// @ts-expect-error Ignore Next.js params typing bug
+export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+  // Await if params is Promise-like, else just use it
+  const awaitedParams = typeof params.then === "function" ? await params : params
   const t = get_string(awaitedParams.locale)
   return {
     title: t.title,
@@ -26,14 +24,15 @@ export async function generateMetadata({
   }
 }
 
+// @ts-expect-error Ignore Next.js params typing bug
 export default async function RootLayout({
   children,
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: string }>
+  params: any
 }) {
-  const awaitedParams = await params
+  const awaitedParams = typeof params.then === "function" ? await params : params
 
   return (
     <html lang={awaitedParams.locale}>
