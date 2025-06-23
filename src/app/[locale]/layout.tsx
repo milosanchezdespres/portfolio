@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import type { Metadata } from "next"
 import '@/app/globals.css'
 import { get_string } from '@/app/lib/translation'
