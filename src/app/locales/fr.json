@@ -5,5 +5,11 @@
   "presen": "Un monde connecté par le net, mais aussi par les mots.",
   "presen_sub": "Une traduction humaine que l'IA ne peut égaler.",
   "action": "Traduisons ensemble",
-  "footer": "©milo-sanchez-despres - 2025-2026 - tout droits reservés."
+  "footer": "©milo-sanchez-despres - 2025-2026 - tout droits reservés.",
+  "nameLabel": "Entreprise / Prénom",
+  "emailLabel": "Email",
+  "messageLabel": "Votre demande",
+  "submitButton": "Contact",
+  "successMessage": "Merci de nous avoir contacté !",
+  "errorMessage": "Une erreur est survenue. Veuillez renvoyer le formulaire."
 }

@@ -35,35 +35,36 @@ export default function Banner({
         <span className="text-3xl font-normal mt-6 block">{sub_text}</span>
       </span>
 
-      <button
-        type="button"
-        className={`
-          relative
-          z-10
-          mt-6
-          px-6
-          py-3
-          bg-white
-          text-[#334498]
-          font-semibold
-          rounded
-          shadow
-          border-2
-          border-[#b45309]
-          transition
-          duration-300
-          transform
-          hover:bg-[#b45309]
-          hover:text-[#fef3c7]
-          hover:shadow-lg
-          hover:scale-105
-          focus:outline-none
-          ${buttonClassName || ''}
-        `}
-      >
-        {button_text}
-      </button>
-
+      <a href="#contact-form">
+        <button
+          type="button"
+          className={`
+            relative
+            z-10
+            mt-6
+            px-6
+            py-3
+            bg-white
+            text-[#334498]
+            font-semibold
+            rounded
+            shadow
+            border-2
+            border-[#b45309]
+            transition
+            duration-300
+            transform
+            hover:bg-[#b45309]
+            hover:text-[#fef3c7]
+            hover:shadow-lg
+            hover:scale-105
+            focus:outline-none
+            ${buttonClassName || ''}
+          `}
+        >
+          {button_text}
+        </button>
+      </a>
     </div>
   )
 }

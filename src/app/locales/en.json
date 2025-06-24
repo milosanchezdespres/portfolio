@@ -5,5 +5,12 @@
   "presen": "The world of tomorrow is online and made of our words.",
   "presen_sub": "Let me translate your toughts.",
   "action": "Translate now",
-  "footer": "©milo-sanchez-despres - 2025-2026 - all right reserved."
+  "footer": "©milo-sanchez-despres - 2025-2026 - all right reserved.",
+  "formTitle": "",
+  "nameLabel": "Name",
+  "emailLabel": "Email",
+  "messageLabel": "Your request",
+  "submitButton": "Contact",
+  "successMessage": "Message sent ! We will reach out soon.",
+  "errorMessage": "Sorry an error occured. Plase try again."
 }

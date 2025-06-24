@@ -5,5 +5,11 @@
   "presen": "【客と話すには心を持った翻訳が必須】",
   "presen_sub": "翻訳から人へ、心へ",
   "action": "会社のコミュ力アップ！連絡",
-  "footer": "© 本サイトの内容の無断転載を禁じます。"
+  "footer": "© 本サイトの内容の無断転載を禁じます。",
+  "nameLabel": "会社名／ご氏名",
+  "emailLabel": "イーメール",
+  "messageLabel": "内容",
+  "submitButton": "連絡",
+  "successMessage": "ご連絡ありがとうございました。",
+  "errorMessage": "申し訳ございません。エラーが発生しました。もう一度ご連絡お願い致します。"
 }

@@ -1,6 +1,7 @@
 import BlockContainer from '@/app/components/BlockContainer'
 import Block from '@/app/components/Block'
 import Banner from '@/app/components/Banner'
+import Contact from '@/app/components/Contact'
 import Footer from '@/app/components/Footer'
 
 import { get_string } from '@/app/lib/translation'
@@ -80,6 +81,16 @@ export default async function Page({ params }: { params: any }) {
           src="/vercel.svg"
         />
       </BlockContainer>
+
+      <Contact 
+        formTitle={messages.formTitle} 
+        nameLabel={messages.nameLabel}
+        emailLabel={messages.emailLabel}
+        messageLabel={messages.messageLabel}
+        submitButton={messages.submitButton}
+        successMessage={messages.successMessage}
+        errorMessage={messages.errorMessage}
+      />
 
       <Footer text={messages.footer} />
     </main>
