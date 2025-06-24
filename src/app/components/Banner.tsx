@@ -13,7 +13,7 @@ export default function Banner({
 }) {
   return (
     <div
-      className="w-full min-h-[700px] p-8 flex flex-col items-center justify-center
+      className="w-full min-h-[400px] md:min-h-[700px] pt-6 md:pt-8 px-8 flex flex-col items-center justify-start md:justify-center
                  bg-[#334498] relative overflow-hidden shadow-md"
     >
       <svg
@@ -29,11 +29,13 @@ export default function Banner({
         ></path>
       </svg>
 
-      <span className="relative z-10 text-5xl font-extrabold text-[#fef3c7] tracking-wide font-sans text-center">
-        {text}
-        <br />
-        <span className="text-3xl font-normal mt-6 block">{sub_text}</span>
-      </span>
+      <div className="relative z-10 mt-8 md:-mt-4 text-center max-w-4xl w-full">
+        <span className="text-xl md:text-5xl font-extrabold text-[#fef3c7] tracking-wide font-sans">
+          {text}
+          <br />
+          <span className="text-base md:text-3xl font-normal block">{sub_text}</span>
+        </span>
+      </div>
 
       <a href="#contact-form">
         <button
