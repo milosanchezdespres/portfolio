@@ -12,23 +12,27 @@ const languages = [
 export default function LanguageSwitcher({ current }: { current: string }) {
   return (
     <div className="flex gap-2">
-      {languages.map(({ code, src, className, imgClass }) => (
-        <Link
-          key={code}
-          href={`/${code}`}
-          className="w-12 h-12 rounded overflow-hidden flex items-center justify-center transition-all hover:border-2 hover:border-black bg-white"
-        >
-          <div className="relative w-8 h-6">
-            <Image
-              src={src}
-              alt={code}
-              fill
-              className={`object-contain ${className || ''} ${imgClass || ''}`}
-              sizes="32px"
-            />
-          </div>
-        </Link>
-      ))}
+      {languages.map(({ code, src, className, imgClass }) => {
+        const isActive = code === current
+        return (
+          <Link
+            key={code}
+            href={`/${code}`}
+            className={`w-12 h-12 rounded overflow-hidden flex items-center justify-center transition-all bg-white 
+              ${isActive ? 'border-2 border-[#b45309]' : 'hover:border-2 hover:border-black'}`}
+          >
+            <div className="relative w-8 h-6">
+              <Image
+                src={src}
+                alt={code}
+                fill
+                className={`object-contain ${className || ''} ${imgClass || ''}`}
+                sizes="32px"
+              />
+            </div>
+          </Link>
+        )
+      })}
     </div>
   )
 }
