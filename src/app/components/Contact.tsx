@@ -46,10 +46,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
     const userID = 'J1davUN7pra_vysg2';
 
     emailjs.sendForm(serviceID, templateID, e.target as HTMLFormElement, userID)
-      .then((result) => {
+      .then(() => {
         setStatus(successMessage);  // Use the success message prop
         setFormData({ name: '', email: '', message: '' }); // Reset form after submission
-      }, (error) => {
+      }, () => {
         setStatus(errorMessage);  // Use the error message prop
       });
   };
