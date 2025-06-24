@@ -23,30 +23,12 @@ export default async function Page({ params }: { params: any }) {
         </div>
       </header>
 
-      <Banner
-        text={messages.presen}
-        sub_text={messages.presen_sub}
-        button_text={messages.action}
-        buttonClassName="
-          bg-[#fef3c7]
-          text-[#b45309]
-          font-semibold
-          rounded-md
-          px-6
-          py-3
-          shadow-sm
-          transition
-          duration-300
-          hover:bg-[#b45309]
-          hover:text-[#fef3c7]
-          hover:shadow-lg
-          hover:scale-105
-          focus:outline-none
-          focus:ring-2
-          focus:ring-[#b45309]
-          focus:ring-opacity-50
-        "
-      />
+<Banner
+  text={messages.presen}
+  sub_text={messages.presen_sub}
+  button_text={messages.action}
+  buttonClassName="bg-[#fef3c7] text-[#b45309] font-semibold"
+/>
 
       <BlockContainer>
         <Block

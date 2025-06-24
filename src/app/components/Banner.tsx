@@ -1,19 +1,20 @@
 'use client'
 
-export default function BlockContainer({
+export default function Banner({
   text,
   sub_text,
   button_text,
+  buttonClassName,
 }: {
   text: string
   sub_text: string
   button_text: string
+  buttonClassName?: string
 }) {
   return (
     <div
       className="w-full min-h-[700px] p-8 flex flex-col items-center justify-center
-        bg-[#334498] relative overflow-hidden
-        shadow-md"
+                 bg-[#334498] relative overflow-hidden shadow-md"
     >
       <svg
         className="absolute bottom-0 left-0 w-full h-40"
@@ -34,36 +35,35 @@ export default function BlockContainer({
         <span className="text-3xl font-normal mt-6 block">{sub_text}</span>
       </span>
 
-<button
-  type="button"
-  className="
-    relative
-    z-10
-    mt-6
-    px-6
-    py-3
-    bg-white
-    text-[#334498]
-    font-semibold
-    rounded
-    shadow
-    transition
-    duration-300
-    transform
-    scale-100
-    hover:bg-[#b45309]
-    hover:text-[#fef3c7]
-    hover:shadow-lg
-    hover:scale-105
-    focus:outline-none
-    focus:ring-2
-    focus:ring-[#b45309]
-    focus:ring-opacity-50
-  "
->
-  {button_text}
-</button>
-
+      <button
+        type="button"
+        className={`
+          relative
+          z-10
+          mt-6
+          px-6
+          py-3
+          bg-white
+          text-[#334498]
+          font-semibold
+          rounded
+          shadow
+          transition
+          duration-300
+          transform
+          hover:bg-[#b45309]
+          hover:text-[#fef3c7]
+          hover:shadow-lg
+          hover:scale-105
+          focus:outline-none
+          focus:ring-2
+          focus:ring-[#b45309]
+          focus:ring-opacity-50
+          ${buttonClassName || ''}
+        `}
+      >
+        {button_text}
+      </button>
     </div>
   )
 }
