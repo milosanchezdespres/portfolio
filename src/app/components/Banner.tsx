@@ -48,6 +48,8 @@ export default function Banner({
           font-semibold
           rounded
           shadow
+          border-2
+          border-[#b45309]
           transition
           duration-300
           transform
@@ -56,14 +58,12 @@ export default function Banner({
           hover:shadow-lg
           hover:scale-105
           focus:outline-none
-          focus:ring-2
-          focus:ring-[#b45309]
-          focus:ring-opacity-50
           ${buttonClassName || ''}
         `}
       >
         {button_text}
       </button>
+
     </div>
   )
 }

@@ -23,12 +23,12 @@ export default async function Page({ params }: { params: any }) {
         </div>
       </header>
 
-<Banner
-  text={messages.presen}
-  sub_text={messages.presen_sub}
-  button_text={messages.action}
-  buttonClassName="bg-[#fef3c7] text-[#b45309] font-semibold"
-/>
+      <Banner
+        text={messages.presen}
+        sub_text={messages.presen_sub}
+        button_text={messages.action}
+        buttonClassName="bg-[#fef3c7] text-[#b45309] font-semibold"
+      />
 
       <BlockContainer>
         <Block
