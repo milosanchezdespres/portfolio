@@ -18,8 +18,16 @@ export default function LanguageSwitcher({ current }: { current: string }) {
           <Link
             key={code}
             href={`/${code}`}
-            className={`w-12 h-12 rounded overflow-hidden flex items-center justify-center transition-all bg-white 
-              ${isActive ? 'border-2 border-[#b45309]' : 'hover:border-2 hover:border-black'}`}
+            className={`
+              w-12 h-12 rounded overflow-hidden flex items-center justify-center
+              border-2
+              transition-transform transition-colors duration-300
+              ${isActive
+                ? 'border-[#b45309] bg-[#b45309] outline-2 outline-white outline-offset-[-2px]'
+                : 'bg-white border-transparent hover:border-[#b45309] hover:bg-[#b45309]'
+              }
+              hover:scale-110
+            `}
           >
             <div className="relative w-8 h-6">
               <Image
