@@ -33,7 +33,7 @@ export default function Banner({
         <span className="text-xl md:text-5xl font-extrabold text-[#fef3c7] tracking-wide font-sans">
           {text}
           <br />
-          <span className="text-base md:text-3xl font-normal block">{sub_text}</span>
+          <span className="text-base md:text-3xl font-normal block mt-4">{sub_text}</span>
         </span>
       </div>
 
