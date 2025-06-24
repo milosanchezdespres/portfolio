@@ -9,27 +9,23 @@ export default function Block({
   text,
   src,
 }: {
-  color: string         // either "#fef3c7" or "#334498"
-  hover: string         // now always "#b45309"
+  color: string         // "#fef3c7" or "#ffffff"
+  hover: string         // always "#b45309"
   text: string
   src: string
 }) {
   const [hovered, setHovered] = useState(false)
 
-  // What background is showing right now?
   const currentBg = hovered ? hover.toLowerCase() : color.toLowerCase()
 
-  // Decide text color by inverting the current background:
   let textColor = '#000'
-  if (currentBg === '#fef3c7') {
-    textColor = '#334498'   // beige → blue text
-  } else if (currentBg === '#334498') {
-    textColor = '#fef3c7'   // blue → beige text
+  if (currentBg === '#fef3c7' || currentBg === '#ffffff') {
+    textColor = '#b45309'   // beige or white background → brown text
   } else if (currentBg === '#b45309') {
-    textColor = '#fef3c7'   // amber → beige text
+    textColor = '#fef3c7'   // brown background → beige text
   }
 
-  // Only show a thin blue border on the un-hovered beige blocks
+  // Thin blue border only on un-hovered beige (#fef3c7) blocks
   const showBorder = !hovered && color.toLowerCase() === '#fef3c7'
 
   return (

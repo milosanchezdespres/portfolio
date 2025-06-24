@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: any }) {
           src="/vercel.svg"
         />
         <Block
-          color="#334498"
+          color="#ffffff"
           hover="#b45309"
           text={messages.example_project_title}
           src="/vercel.svg"
@@ -49,13 +49,13 @@ export default async function Page({ params }: { params: any }) {
           src="/vercel.svg"
         />
         <Block
-          color="#334498"
+          color="#ffffff"
           hover="#b45309"
           text={messages.example_project_title}
           src="/vercel.svg"
         />
         <Block
-          color="#334498"
+          color="#ffffff"
           hover="#b45309"
           text={messages.example_project_title}
           src="/vercel.svg"
@@ -67,7 +67,7 @@ export default async function Page({ params }: { params: any }) {
           src="/vercel.svg"
         />
         <Block
-          color="#334498"
+          color="#ffffff"
           hover="#b45309"
           text={messages.example_project_title}
           src="/vercel.svg"
