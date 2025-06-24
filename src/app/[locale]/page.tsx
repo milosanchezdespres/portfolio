@@ -10,31 +10,77 @@ import LocalSwitch from '@/app/components/LocalSwitch'
 export default async function Page({ params }: { params: any }) {
   const awaitedParams = typeof params.then === 'function' ? await params : params
   const messages = get_string(awaitedParams.locale)
-  
+
   return (
     <main>
-      <header className="p-4">
+      <header
+        className="p-4 bg-[#b45309] text-white relative z-10"
+        style={{ boxShadow: '0 4px 8px rgba(180, 83, 9, 0.3)' }}
+      >
         <div className="flex items-center space-x-2">
           <LocalSwitch current={awaitedParams.locale} />
-          <span className="text-lg uppercase">{messages.description}</span> 
+          <span className="text-xl uppercase ml-4">{messages.description}</span>
         </div>
       </header>
 
-      <Banner text = {messages.presen} sub_text = {messages.presen_sub} />
+      <Banner
+        text={messages.presen}
+        sub_text={messages.presen_sub}
+        button_text={messages.action}
+      />
 
       <BlockContainer>
-        <Block color="#34d399" hover="#ffde00" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#f87171" hover="#60a5fa" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#60a5fa" hover="#f87171" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#ffde00" hover="#f87171" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#ffde00" hover="#f87171" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#60a5fa" hover="#f87171" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#34d399" hover="#ffde00" text={messages.example_project_title} src="/vercel.svg" />
-        <Block color="#f87171" hover="#60a5fa" text={messages.example_project_title} src="/vercel.svg" />
+        <Block
+          color="#fef3c7"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#334498"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#fef3c7"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#334498"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#334498"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#fef3c7"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#334498"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
+        <Block
+          color="#fef3c7"
+          hover="#b45309"
+          text={messages.example_project_title}
+          src="/vercel.svg"
+        />
       </BlockContainer>
 
-      <Footer text = {messages.footer} />
-      
+      <Footer text={messages.footer} />
     </main>
   )
 }

@@ -1,11 +1,20 @@
 'use client'
 
-export default function BlockContainer({ text, sub_text }: { text: string; sub_text: string }) {
+export default function BlockContainer({
+  text,
+  sub_text,
+  button_text,
+}: {
+  text: string
+  sub_text: string
+  button_text: string
+}) {
   return (
-    <div className="w-full min-h-[700px] p-8 flex flex-col items-center justify-center
-      bg-[#334498] relative overflow-hidden
-      shadow-md
-    ">
+    <div
+      className="w-full min-h-[700px] p-8 flex flex-col items-center justify-center
+        bg-[#334498] relative overflow-hidden
+        shadow-md"
+    >
       <svg
         className="absolute bottom-0 left-0 w-full h-40"
         xmlns="http://www.w3.org/2000/svg"
@@ -19,11 +28,20 @@ export default function BlockContainer({ text, sub_text }: { text: string; sub_t
         ></path>
       </svg>
 
-      <span className="relative z-10 text-5xl font-extrabold text-white tracking-wide font-sans text-center">
+      <span className="relative z-10 text-5xl font-extrabold text-[#fef3c7] tracking-wide font-sans text-center">
         {text}
         <br />
         <span className="text-3xl font-normal mt-6 block">{sub_text}</span>
       </span>
+
+      <button
+        type="button"
+        className="relative z-10 mt-6 px-6 py-3 bg-white text-[#334498] font-semibold rounded shadow
+                   transition-colors duration-300
+                   hover:bg-[#b45309] hover:text-[#fef3c7]"
+      >
+        {button_text}
+      </button>
     </div>
   )
 }
