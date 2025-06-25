@@ -1,5 +1,7 @@
 'use client'
 
+import ProjectButton from '@/app/components/ProjectButton'
+
 export default function Banner({
   text,
   sub_text,
@@ -46,18 +48,18 @@ export default function Banner({
             mt-6
             px-6
             py-3
-            bg-white
-            text-[#334498]
+            text-[#fef3c7]
             font-semibold
+            bg-amber-700
             rounded
             shadow
             border-2
-            border-[#b45309]
+            border-[#fef3c7]
             transition
             duration-300
             transform
-            hover:bg-[#b45309]
-            hover:text-[#fef3c7]
+            hover:bg-white
+            hover:text-[#b45309]
             hover:shadow-lg
             hover:scale-105
             focus:outline-none
@@ -67,6 +69,8 @@ export default function Banner({
           {button_text}
         </button>
       </a>
+
+      <ProjectButton />
     </div>
   )
 }
