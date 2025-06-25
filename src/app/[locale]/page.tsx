@@ -34,6 +34,7 @@ export default async function Page({ params }: { params: any }) {
         sub_text={messages.presen_sub}
         button_text={messages.action}
         buttonClassName="bg-[#fef3c7] text-[#b45309] font-semibold"
+        project_button_label={messages.project_button_label}
       />
 
       <BlockContainer>

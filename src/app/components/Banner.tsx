@@ -7,11 +7,13 @@ export default function Banner({
   sub_text,
   button_text,
   buttonClassName,
+  project_button_label,
 }: {
   text: string
   sub_text: string
   button_text: string
   buttonClassName?: string
+  project_button_label?: string
 }) {
   return (
     <div
@@ -70,7 +72,7 @@ export default function Banner({
         </button>
       </a>
 
-      <ProjectButton />
+      <ProjectButton label={project_button_label || ''} />
     </div>
   )
 }
