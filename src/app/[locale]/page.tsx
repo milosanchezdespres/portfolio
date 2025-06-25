@@ -15,12 +15,17 @@ export default async function Page({ params }: { params: any }) {
   return (
     <main>
       <header
-        className="p-4 bg-[#b45309] text-white relative z-10"
+        className="sticky top-0 p-4 bg-[#b45309] text-white z-50"
         style={{ boxShadow: '0 4px 8px rgba(180, 83, 9, 0.3)' }}
       >
         <div className="flex items-center space-x-2">
           <LocalSwitch current={awaitedParams.locale} />
-          <span className="text-xl uppercase ml-4">{messages.description}</span>
+          <a
+            href="#contact-form"
+            className="text-xl uppercase ml-4 hover:underline"
+          >
+            {messages.description}
+          </a>
         </div>
       </header>
 
@@ -82,8 +87,8 @@ export default async function Page({ params }: { params: any }) {
         />
       </BlockContainer>
 
-      <Contact 
-        formTitle={messages.formTitle} 
+      <Contact
+        formTitle={messages.formTitle}
         nameLabel={messages.nameLabel}
         emailLabel={messages.emailLabel}
         messageLabel={messages.messageLabel}

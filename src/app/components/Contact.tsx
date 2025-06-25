@@ -55,7 +55,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
   };
 
   return (
-    <div id="contact-form" className="flex justify-center items-center min-h-screen bg-[#334498] p-10">
+    <div id="contact-form" className="relative pt-20">
+    <div className="flex justify-center items-center min-h-screen bg-[#334498] p-10">
       <div className="contact-form-container w-full max-w-2xl p-12 bg-white rounded-lg shadow-md">
         <h2 className="text-3xl font-extrabold text-[#334498] text-center mb-6">{formTitle}</h2>
         
@@ -108,6 +109,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
         {status && <div className="status-message mt-6 text-center text-lg font-semibold text-[#b45309]">{status}</div>}  {/* Display status message */}
       </div>
+    </div>
     </div>
   );
 };
