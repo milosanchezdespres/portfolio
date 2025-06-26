@@ -15,14 +15,14 @@ export default async function Page({ params }: { params: any }) {
   return (
     <main>
       <header
-        className="sticky top-0 p-4 bg-[#b45309] text-white z-50"
+        className="sticky top-0 bg-white text-[#334498] z-50"
         style={{ boxShadow: '0 4px 8px rgba(180, 83, 9, 0.3)' }}
       >
         <div className="flex items-center space-x-2">
           <LocalSwitch current={awaitedParams.locale} />
           <a
             href="#contact-form"
-            className="text-xl uppercase ml-4 hover:underline"
+            className="text-0.5xl uppercase ml-4 hover:underline"
           >
             {messages.description}
           </a>

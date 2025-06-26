@@ -23,8 +23,8 @@ export default function LanguageSwitcher({ current }: { current: string }) {
               border-2
               transition-transform transition-colors duration-300
               ${isActive
-                ? 'border-[#b45309] bg-[#b45309] outline-2 outline-white outline-offset-[-2px]'
-                : 'bg-white border-transparent hover:border-[#b45309] hover:bg-[#b45309]'
+                ? 'outline-2 outline-white outline-offset-[-2px]'
+                : 'hover:bg-[#334498] bg-white border-transparent'
               }
               hover:scale-110
             `}
