@@ -34,10 +34,10 @@ export default function Banner({
       </svg>
 
       <div className="relative z-10 mt-8 md:-mt-4 text-center max-w-4xl w-full">
-        <span className="text-xl md:text-2xl font-extrabold text-[#fef3c7] tracking-wide font-sans">
+        <span className="text-xl md:text-4xl font-extrabold text-[#fef3c7] tracking-wide font-sans">
           {text}
           <br />
-          <span className="text-base md:text-1xl font-normal block mt-4">{sub_text}</span>
+          <span className="text-base md:text-3xl font-normal block mt-4">{sub_text}</span>
         </span>
       </div>
 
