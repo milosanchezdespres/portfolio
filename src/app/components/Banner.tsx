@@ -50,9 +50,9 @@ export default function Banner({
             mt-6
             px-6
             py-3
-            text-[#fef3c7]
+            text-[#b45309]
             font-semibold
-            bg-amber-700
+            bg-white
             rounded
             shadow
             border-2
@@ -60,8 +60,8 @@ export default function Banner({
             transition
             duration-300
             transform
-            hover:bg-white
-            hover:text-[#b45309]
+            hover:bg-amber-700
+            hover:text-[#fef3c7]
             hover:shadow-lg
             hover:scale-105
             focus:outline-none
